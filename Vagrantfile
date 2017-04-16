@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 9200, host: 9200
   
   # network adapter
-  config.vm.network "private_network", ip: "192.168.33.10" 
+  config.vm.network "private_network", ip: "192.168.33.11" 
   
   # shared folder
   config.vm.synced_folder "..", "/var/www/html/data"
@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |v|
   v.memory = 8192
   v.cpus = 4
-  v.name = "ES-5.x"
+  v.name = "ES-2.x"
 
   end
 

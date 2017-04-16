@@ -70,9 +70,10 @@ sudo apt-get install oracle-java8-installer -y
 
 
 # install ES
-curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.0.tar.gz
+curl -L -O curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.4/elasticsearch-2.3.4.tar.gz
 
-tar -xvf elasticsearch-5.3.0.tar.gz
+
+tar -xvf elasticsearch-2.3.4.tar.gz
 
 sudo sysctl -w vm.max_map_count=262144
 echo "vagrant soft     nofile         65536" | sudo tee --append /etc/security/limits.conf
@@ -81,12 +82,12 @@ echo "session required pam_limits.so" | sudo tee --append /etc/pam.d/common-sess
 sudo -H -u vagrant bash -c 'ulimit -n'
 
 # either of the next two lines is needed to be able to access "localhost:9200" from the host os
-echo "network.bind_host: 0" >> elasticsearch-5.3.0/config/elasticsearch.yml
-echo "network.host: 0.0.0.0" >> elasticsearch-5.3.0/config/elasticsearch.yml
+echo "network.bind_host: 0" >> elasticsearch-2.3.4/config/elasticsearch.yml
+echo "network.host: 0.0.0.0" >> elasticsearch-2.3.4/config/elasticsearch.yml
 # enable dynamic scripting
-echo "script.inline: on" >> elasticsearch-5.3.0/config/elasticsearch.yml
+echo "script.inline: on" >> elasticsearch-2.3.4/config/elasticsearch.yml
 # enable cors (to be able to use Sense)
-echo "http.cors.enabled: true" >> elasticsearch-5.3.0/config/elasticsearch.yml
-echo "http.cors.allow-origin: /https?:\/\/.*/" >> elasticsearch-5.3.0/config/elasticsearch.yml
+echo "http.cors.enabled: true" >> elasticsearch-2.3.4/config/elasticsearch.yml
+echo "http.cors.allow-origin: /https?:\/\/.*/" >> elasticsearch-2.3.4/config/elasticsearch.yml
 
-sudo chown -R vagrant:vagrant elasticsearch-5.3.0
+sudo chown -R vagrant:vagrant elasticsearch-2.3.4
