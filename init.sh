@@ -70,7 +70,7 @@ sudo apt-get install oracle-java8-installer -y
 
 
 # install ES
-curl -L -O curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.4/elasticsearch-2.3.4.tar.gz
+curl -L -O  https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.4/elasticsearch-2.3.4.tar.gz
 
 
 tar -xvf elasticsearch-2.3.4.tar.gz
@@ -91,3 +91,5 @@ echo "http.cors.enabled: true" >> elasticsearch-2.3.4/config/elasticsearch.yml
 echo "http.cors.allow-origin: /https?:\/\/.*/" >> elasticsearch-2.3.4/config/elasticsearch.yml
 
 sudo chown -R vagrant:vagrant elasticsearch-2.3.4
+sudo elasticsearch-2.3.4/bin/plugin install mobz/elasticsearch-head
+sudo elasticsearch-2.3.4/bin/plugin install org.bitbucket.eunjeon/elasticsearch-analysis-seunjeon/2.4.0.0
