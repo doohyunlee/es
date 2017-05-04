@@ -92,4 +92,9 @@ echo "http.cors.allow-origin: /https?:\/\/.*/" >> elasticsearch-2.3.4/config/ela
 
 sudo chown -R vagrant:vagrant elasticsearch-2.3.4
 sudo elasticsearch-2.3.4/bin/plugin install mobz/elasticsearch-head
-sudo elasticsearch-2.3.4/bin/plugin install org.bitbucket.eunjeon/elasticsearch-analysis-seunjeon/2.4.0.0
+
+#sudo elasticsearch/bin/plugin install mobz/elasticsearch-head
+wget https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.2.tar.gz
+tar zxfv mecab-0.996-ko-0.9.2.tar.gz
+
+#sudo elasticsearch-2.3.4/bin/plugin install org.bitbucket.eunjeon/elasticsearch-analysis-seunjeon/2.4.0.0
