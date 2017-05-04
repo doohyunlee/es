@@ -105,4 +105,9 @@ sudo elasticsearch-2.3.4/bin/plugin install mobz/elasticsearch-head
 wget https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.2.tar.gz
 tar zxfv mecab-0.996-ko-0.9.2.tar.gz
 
+wget https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150920.tar.gz
+
+tar zxfv mecab-ko-dic-2.0.1-20150920.tar.gz
+
+
 #sudo elasticsearch-2.3.4/bin/plugin install org.bitbucket.eunjeon/elasticsearch-analysis-seunjeon/2.4.0.0
