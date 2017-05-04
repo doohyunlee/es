@@ -61,6 +61,14 @@ yes | mv php.ini /etc/php/7.0/apache2/php.ini
 
 sudo a2enmod rewrite
 
+sudo apt-get update
+sudo apt-get upgrade
+
+#gcc/g++ 설치
+sudo apt-get install gcc
+sudo apt-get -y install g++
+
+
 # install openjdk-8
 sudo apt-get purge openjdk*
 sudo add-apt-repository ppa:webupd8team/java -y
